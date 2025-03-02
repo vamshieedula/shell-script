@@ -26,7 +26,7 @@ else
         echo "you are root user"
 fi
 
-dnf install mysql-server –y &>>$LOGFILE
+dnf install mysql-server -y &>>$LOGFILE
 Validate $? "Installing Mysql server"
 
 systemctl enable mysqld &>>$LOGFILE
