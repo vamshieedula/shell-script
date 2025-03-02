@@ -44,7 +44,7 @@ mysql -h db.eedula.shop -uroot -p${mysql_root_password} -e 'show databases;' &>>
 if [ $? -ne 0 ]
 then
 	mysql_secure_installation --set-root-pass ${mysql_root_password} &>>LOGFILE
-	Validate $? “Root password setup”
+	Validate $? "Root password setup"
 else
 	echo -e "Mysql Root password is already setup… $Y SKIPPIING $N"
 fi
