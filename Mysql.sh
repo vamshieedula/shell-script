@@ -39,7 +39,7 @@ Validate $? "starting Mysql server"
 #Validate $? "Setting up root password"
 
 #below code is useful for idempotent nature
-mysql -h db.<domainName> -uroot -p${mysql_root_password} -e 'show databases;' &>>$LOGFILE
+mysql -h db.eedula.shop -uroot -p${mysql_root_password} -e 'show databases;' &>>$LOGFILE
 
 if [ $? -ne 0 ]
 then
